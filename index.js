@@ -12,8 +12,8 @@ const invokeKey = 'ros';
 const handleShort = require('./handlers/wra/short');
 const handleImage = require('./handlers/wra/image');
 const handleGoogle = require('./handlers/google/googleHandler');
-let sessionLocal = JSON.parse(process.env.WW_SESSION);
-console.log(sessionLocal);
+// let sessionLocal = JSON.parse(process.env.WW_SESSION);
+// console.log(sessionLocal);
 
 const puppeteerOptions = {
     headless: true,
@@ -22,7 +22,7 @@ const puppeteerOptions = {
 
 const client = new Client({
     puppeteer: puppeteerOptions,
-    session: sessionLocal
+    // session: sessionLocal
 });
 
 client.on('qr', qr => {
